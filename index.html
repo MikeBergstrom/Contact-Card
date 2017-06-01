@@ -8,18 +8,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>$(document).ready(function(){
 
+        $(document).on('click', '.card',function(){
+            $(this).children().toggle("slow");
+        })
+            $('form').submit(function(){
+                var first = $('#first').val();
+                var last = $('#last').val();
+                var desc = $('#description').val();
+                $('#right').append("<div class=\"card\"><h2>" + first + " " + last + "</h2><p>Click for Description!</p><p style=\"display:none\">" + desc + "</9></div>");
+                return false
+            })
     })
     </script>
 </head>
 <body>
-    <h1>Codgin Dojo Contacts Page</h1>
-    <form>
-        <p>First Name:</p>
-        <input type="text" name="First Name">
-        <p>Last Name:</p>
-        <input type="text" name="Last Name">
-        <p>Description:</p>
-        <textarea name="Description" rows="8"></textarea>
-        <input type="submit" name="Add User">
-    </form>
+    <div id="left">
+        <h1>Coding Dojo Contacts Page</h1>
+        <form>
+            <p>First Name:</p>
+            <input id="first" type="text" name="First Name">
+            <p>Last Name:</p>
+            <input id="last" type="text" name="Last Name">
+            <p>Description:</p>
+            <textarea id="description" name="Description" rows="8"></textarea>
+            <input type="submit" value="Add User">
+        </form>
+    </div>
+    <div id="right">
+    </div>
 </body>

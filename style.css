@@ -1,6 +1,33 @@
+body{
+    width: 900px;
+    background-color: grey;
+}
 form{
     border: 2px solid black;
     display: inline-block;
     padding: 20px;
     width: 250px;
+}
+.card{
+    border: 2px solid black;
+    width: 200px;
+    height: 110px;
+    display: inline-block;
+    padding: 20px;
+    margin-left: 100px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+#right{
+    display: inline-block;
+    width: 300px;
+
+}
+#left{
+    display: inline-block;
+    vertical-align: top;
+}
+p{
+    width: 200px;
+    overflow-wrap: break-word;
 }
